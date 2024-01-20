@@ -1,7 +1,7 @@
 interBANK
 =====================
 
-![alt text](http://marcin86.pythonanywhere.com/static/InterBANK.PNG)
+![alt text](https://github.com/marcin86junior/interBANK/blob/main/readme.PNG)
 
 Overview
 --------
@@ -11,7 +11,7 @@ interBANK is simple banking web application created using Django REST Framework.
 Requirements:
 -------------
 
-	Python 3.10.8 (3.x.x working in Docker)
+	Python 3.10.8 (3.10.x working with Docker)
 	Django 4.2
     Djangorestframework==3.14.0
 
@@ -20,59 +20,31 @@ Installation:
 
 
 	Create new folder "interBANK" and open it:
-	git clone https://github.com/marcin86junior/MegaPictureUploadREST.git .
+	git clone https://github.com/marcin86junior/interBANK .
 	python -m venv myvenv
 	.\myvenv\Scripts\activate
 	pip install -r requirements.txt
-	cd django_rest_imageupload_backend\
+	cd inter_project\
 	python manage.py migrate
-	python manage.py migrate --run-syncdb
-	python manage.py loaddata group.json users.json data.json
 	python .\manage.py runserver
-	http://127.0.0.1:8000/api/
-	*python manage.py createsuperuser (marcin/123)
+	http://127.0.0.1:8000/
 
 
 Testing:
 --------
 
 	python manage.py test
-	coverage run --source='.' --omit='*migrations*,*init*,*wsgi*,*asgi*,*urls*,*manage*,*admin*,*apps*,*settings*,*test*,*seriali*' manage.py test
-	coverage report (or) coverage html
 
 
 Docker:
 -------
 
 	Create new folder "interBANK" and open it:
-	git clone https://github.com/marcin86junior/MegaPictureUploadREST.git .
-	cd django_rest_imageupload_backend\
+	git clone https://github.com/marcin86junior/interBANK .
+	cd inter_project\
 	"Open Doker Desktop"
-	format file in \django_rest_imageupload_backend\docker-entrypoint.sh    CRLF->LF
+	change format file in \inter_project\docker-entrypoint.sh    CRLF->LF
 	docker-compose up
 	http://127.0.0.1:8000/api/
 	Test:
 	docker-compose run web python3 manage.py test
-
-
-Fixtures
---------
-
-
-	Data included in fixtures:
-
-	User / Password / Assigned group / Added pictures to model
-	b1 / 123 / Basic / 2
-	p2 / 123 / Premium / 2
-	e3 / 123 / Enterprice/ 2 
-	c4 / 123 / Custom/ 2
-
-
-Issues
-------
-
-
-	At the moment there are few issuse:
-
-	- aaa
-	- bbb
