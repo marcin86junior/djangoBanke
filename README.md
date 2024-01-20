@@ -44,8 +44,40 @@ Docker:
 	git clone https://github.com/marcin86junior/interBANK .
 	cd inter_project\
 	"Open Doker Desktop"
-	change format file in \inter_project\docker-entrypoint.sh    CRLF->LF
+	change format file in \inter_project\docker-entrypoint.sh    CRLF->LF (save!)
+	add SECRET_KEY = 'xxx' in settings.py
 	docker-compose up
 	http://127.0.0.1:8000/
 	Test:
 	docker-compose run web python3 manage.py test
+
+
+Instructions:
+-------
+
+
+    Register on the Website:
+        Go to the main page http://127.0.0.1:8000/ to register an account.
+        Navigate to the "Register" section http://127.0.0.1:8000/api/user_create/
+
+    Log In:
+        After registering, log in to your account using your credentials.
+        Navigate to the "Login" section http://127.0.0.1:8000/api/api-auth/login/
+
+    Check Account Balance:
+        To check your account balance, go to "My Account":
+            Visit http://127.0.0.1:8000/api/account/
+            Your current account balance will be displayed on the dashboard.
+
+    Check Transaction List:
+        To check your transactions, go to "Transaction List":
+            Visit http://127.0.0.1:8000/api/transactions_list/
+            Your current account balance will be displayed on the dashboard.
+
+    Deposit Funds:
+        Navigate to the "Internal Deposit/Withdraw" section on http://127.0.0.1:8000/api/transaction/
+        Follow the provided instructions to complete the deposit transaction.
+
+    Outside Transfer:
+        Navigate to the "Outside Transfer" section on http://127.0.0.1:8000/api/transfer/
+        Follow the provided instructions to complete the transfer transaction.
