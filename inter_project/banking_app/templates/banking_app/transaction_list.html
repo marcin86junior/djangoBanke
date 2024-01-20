@@ -1,0 +1,28 @@
+<!-- templates/transaction_list.html -->
+{% extends 'banking_app/base.html' %}
+{% block head_title %}Transaction List{% endblock %}
+
+{% block content %}
+    <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10">Transaction List</h1>
+    <hr />
+    <div class="w-full mt-10">
+        <table class="table-auto w-full">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 text-center">Amount</th>
+                    <th class="border px-4 py-2 text-center">Transaction Type</th>
+                    <th class="border px-4 py-2 text-center">Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td class="border px-4 py-2 text-center">{{ transaction.amount }}</td>
+                        <td class="border px-4 py-2 text-center">{{ transaction.transaction_type }}</td>
+                        <td class="border px-4 py-2 text-center">{{ transaction.timestamp }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

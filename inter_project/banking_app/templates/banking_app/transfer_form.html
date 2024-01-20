@@ -1,0 +1,23 @@
+{% extends 'banking_app/base.html' %}
+{% block head_title %}interBANK Outsite Transfer{% endblock %}
+{% block content %}
+<h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10">Outsite Transfer</h1>
+<hr />
+<div class="w-full mt-10">
+    <form method="post" class="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        <label for="from_account_id" class="block text-gray-700 text-sm font-bold mb-2">From Account NO:</label>
+        <input type="text" name="from_account_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required><br>
+
+        <label for="to_account_id" class="block text-gray-700 text-sm font-bold mb-2">To Account NO:</label>
+        <input type="text" name="to_account_id" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required><br>
+
+        <label for="amount" class="block text-gray-700 text-sm font-bold mb-2">Amount:</label>
+        <input type="text" name="amount" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required><br>
+        <br>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Transfer</button>
+    </form>
+{% endblock %}
+
+
+

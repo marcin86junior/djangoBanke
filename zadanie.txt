@@ -1,0 +1,14 @@
+Aplikacja symulująca konto internetowe:
+Framework Django/DRF
+
+Minimum :
+    Endpointy/ widoki - utwórz konto, wpływ, przelew, saldo, historia
+    Read.me z pełnym opisem instalacji i działania aplikacji
+    Testy
+
+Mile widziane:
+    Docker-compose
+    dodatkowe endpointy/widoki według własnej inwencji
+
+Celem zadania jest sprawdzenie umiejętności rozwiązywania problemów, budowania logiki i wykorzystywania możliwości języka Python.
+Aplikację prosimy udostępnić w GitHub lub Gitlab w terminie do 22.01.
