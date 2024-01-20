@@ -5,11 +5,13 @@ from .views import (AccountViewSet, UserViewSet, TransactionViewSet, MyAccountVi
 
 router = DefaultRouter()
 router.register(r'account', MyAccountViewSet, basename='account')
-router.register(r'accounts_list', AccountViewSet, basename='accounts_list')
 router.register(r'user_create', UserViewSet, basename='user_create')
-router.register(r'users_list', UserListViewSet, basename='user_list')
 router.register(r'transaction', TransactionViewSet, basename='transaction')
 router.register(r'transactions_list', TransactionListViewSet, basename='transaction_list')
+
+# In future for Admin group:
+# router.register(r'users_list', UserListViewSet, basename='user_list')
+# router.register(r'accounts_list', AccountViewSet, basename='accounts_list')
 
 urlpatterns = [
     path('', include(router.urls)),
