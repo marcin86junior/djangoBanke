@@ -26,6 +26,7 @@ Installation:
 	pip install -r requirements.txt
 	cd inter_project\
 	python manage.py migrate
+	add SECRET_KEY = 'xxx' in settings.py
 	python .\manage.py runserver
 	http://127.0.0.1:8000/
 
@@ -45,6 +46,6 @@ Docker:
 	"Open Doker Desktop"
 	change format file in \inter_project\docker-entrypoint.sh    CRLF->LF
 	docker-compose up
-	http://127.0.0.1:8000/api/
+	http://127.0.0.1:8000/
 	Test:
 	docker-compose run web python3 manage.py test
