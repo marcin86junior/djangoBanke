@@ -81,3 +81,32 @@ Instructions:
     Outside Transfer:
         Navigate to the "Outside Transfer" section on http://127.0.0.1:8000/api/transfer/
         Follow the provided instructions to complete the transfer transaction.
+
+
+Tests:
+-------
+
+
+    Unauthenticated User Page Test:
+        Navigate to the main page [http://127.0.0.1:8000/] without logging in.
+        Confirm that the page is accessible and displays relevant information for unauthenticated users.
+
+    User Registration Test:
+        Go to the "Register" section [http://127.0.0.1:8000/api/user_create/].
+        Complete the registration process with valid credentials.
+        Verify that the registration is successful and that the user can now log in.
+	
+	Main Page After Login Test:
+        Log in using valid credentials.
+        Navigate to the main page [http://127.0.0.1:8000/] after logging in.
+        Confirm that the page is accessible and displays relevant information for authenticated users.
+
+    Internal Transfer Test:
+        Visit the "Internal Deposit/Withdraw" section [http://127.0.0.1:8000/api/transaction/].
+        Follow the provided instructions to complete an internal fund transfer.
+        Confirm that the transaction is reflected accurately in the user's account balance.
+
+    Two Users Registration and Account Transfer Test:
+        Register two users using the registration process.
+        Log in with the credentials of the first user and initiate a transfer to the second user's account.
+        Log in with the credentials of the second user and confirm that the funds have been successfully transferred.
