@@ -112,12 +112,12 @@ Tests:
         Log in with the credentials of the second user and confirm that the funds have been successfully transferred.
 
 
-TODO list:
+Todo list:
 -------
 
 
-    Add html template for My account
-    Add html template for Internal transfer
+    Add html template for My account [OK]
+    Add html template for Internal transfer 
     Add html template for User registration
     Add html template for Status
     Fix for docker: docker-compose run web python3 manage.py test
