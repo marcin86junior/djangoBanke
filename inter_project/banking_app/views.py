@@ -26,6 +26,10 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.none()
     serializer_class = UserSerializer
 
+    @action(detail=False, methods=["get"])
+    def register_form(self, request):
+        return render(request, 'banking_app/user_registration.html')
+
     @action(detail=False, methods=["post"])
     def register(self, request):
         username = request.data.get("username")
@@ -110,12 +114,12 @@ class MyAccountViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        # Only show the accounts related to the currently logged-in user
         return Account.objects.filter(user=self.request.user)
 
-    # def list(self, request, *args, **kwargs):
-    #     accounts = self.get_queryset()
-    #     return render(request, 'banking_app/my_account_list.html', {'accounts': accounts})
+    def list(self, request, *args, **kwargs):
+        accounts = self.get_queryset()
+        print(accounts)
+        return render(request, 'banking_app/my_account_list.html', {'accounts': accounts})
 
 
 class TransactionViewSet(viewsets.ModelViewSet):

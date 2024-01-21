@@ -1,24 +1,21 @@
-{% block head_title %}My Account{% endblock %}
+
+{% block head_title %}interBANK My Account{% endblock %}
 
 {% block content %}
     <h1 class="font-mono font-bold text-3xl text-center pb-5 pt-10">My Account</h1>
     <hr />
     <div class="lg:container lg:mx-auto">
-        {% if queryset %}
+        {% if accounts %}
             <table class="table-auto w-full mt-10">
-                <thead>
+                <tbody>
                     <tr>
                         <th class="px-4 py-2">Account Number</th>
                         <th class="px-4 py-2">Balance</th>
-                        <!-- Add other fields if needed -->
                     </tr>
-                </thead>
-                <tbody>
-                    {% for account in queryset %}
+                    {% for account in accounts %}
                         <tr>
-                            <td class="border px-4 py-2">{{ account.account_no }}</td>
-                            <td class="border px-4 py-2">{{ account.balance }}</td>
-                            <!-- Add other fields if needed -->
+                            <td class="border px-4 py-2 text-center">{{ account.account_no }}</td>
+                            <td class="border px-4 py-2 text-center">{{ account.balance }}</td>
                         </tr>
                     {% endfor %}
                 </tbody>
