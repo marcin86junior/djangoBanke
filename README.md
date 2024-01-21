@@ -110,3 +110,16 @@ Tests:
         Register two users using the registration process.
         Log in with the credentials of the first user and initiate a transfer to the second user's account.
         Log in with the credentials of the second user and confirm that the funds have been successfully transferred.
+
+
+TODO list:
+-------
+
+
+    Add html template for My account
+    Add html template for Internal transfer
+    Add html template for User registration
+    Add html template for Status
+    Fix for docker: docker-compose run web python3 manage.py test
+    Fix for docker: remove double requirements.txt in folders
+    Fix for docker: remove postgres from docker-compose.yml

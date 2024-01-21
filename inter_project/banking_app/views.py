@@ -1,7 +1,7 @@
 from .models import Account, Transaction, User
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
-from rest_framework import viewsets, generics, permissions
+from rest_framework import viewsets, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
