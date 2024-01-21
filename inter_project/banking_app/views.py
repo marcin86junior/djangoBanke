@@ -118,7 +118,6 @@ class MyAccountViewSet(viewsets.ReadOnlyModelViewSet):
 
     def list(self, request, *args, **kwargs):
         accounts = self.get_queryset()
-        print(accounts)
         return render(
             request, "banking_app/my_account_list.html", {"accounts": accounts}
         )
