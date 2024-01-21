@@ -117,8 +117,8 @@ Todo list:
 
 
     Add html template for My account [OK]
+    Add html template for User registration [finish: /api/user_create/register_form/]
     Add html template for Internal transfer 
-    Add html template for User registration
     Add html template for Status
     Fix for docker: docker-compose run web python3 manage.py test
     Fix for docker: remove double requirements.txt in folders
