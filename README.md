@@ -123,3 +123,5 @@ Todo list:
     Fix for docker: docker-compose run web python3 manage.py test
     Fix for docker: remove double requirements.txt in folders
     Fix for docker: remove postgres from docker-compose.yml
+    Add to Transaction model: balance_after_transaction = models.DecimalField(decimal_places=2, max_digits=12)
+    Add to Account model: currency [only PLN]

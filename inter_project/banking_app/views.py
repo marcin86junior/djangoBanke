@@ -28,7 +28,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=["get"])
     def register_form(self, request):
-        return render(request, 'banking_app/user_registration.html')
+        return render(request, "banking_app/user_registration.html")
 
     @action(detail=False, methods=["post"])
     def register(self, request):
@@ -119,7 +119,9 @@ class MyAccountViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         accounts = self.get_queryset()
         print(accounts)
-        return render(request, 'banking_app/my_account_list.html', {'accounts': accounts})
+        return render(
+            request, "banking_app/my_account_list.html", {"accounts": accounts}
+        )
 
 
 class TransactionViewSet(viewsets.ModelViewSet):
