@@ -8,21 +8,28 @@ class Account(models.Model):
         return random.randint(10**11, 10**12 - 1)
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    account_no = models.PositiveIntegerField(unique=True, default=generate_random_account_no)
+    account_no = models.PositiveIntegerField(
+        unique=True, default=generate_random_account_no
+    )
     balance = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    #currency (to be added)
+    # currency (to be added)
 
     def __str__(self):
-        return str("User: ")+str(self.user)+str(", Account numer: ")+str(self.account_no)
+        return (
+            str("User: ")
+            + str(self.user)
+            + str(", Account numer: ")
+            + str(self.account_no)
+        )
 
 
 class Transaction(models.Model):
-    DEPOSIT = 'DEPOSIT'
-    WITHDRAWAL = 'WITHDRAWAL'
+    DEPOSIT = "DEPOSIT"
+    WITHDRAWAL = "WITHDRAWAL"
 
     TRANSACTION_TYPE_CHOICES = [
-        (DEPOSIT, 'Deposit'),
-        (WITHDRAWAL, 'Withdrawl'),
+        (DEPOSIT, "Deposit"),
+        (WITHDRAWAL, "Withdrawl"),
     ]
 
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
