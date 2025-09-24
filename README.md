@@ -1,4 +1,4 @@
-interBANK
++BANK
 =====================
 
 ![alt text](https://github.com/marcin86junior/interBANK/blob/main/readme.PNG)
