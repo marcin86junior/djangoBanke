@@ -6,7 +6,7 @@ djangoBanke
 Overview
 --------
 
-interBANK is simple banking web application created using Django REST Framework.
+djangoBanke is simple banking web application created using Django REST Framework.
 
 Requirements:
 -------------
@@ -19,8 +19,8 @@ Installation:
 -------------
 
 
-	Create new folder "interBANK" and open it:
-	git clone https://github.com/marcin86junior/interBANK .
+	Create new folder "djangoBanke" and open it:
+	git clone https://github.com/marcin86junior/djangoBanke .
 	python -m venv myvenv
 	.\myvenv\Scripts\activate
 	pip install -r requirements.txt
@@ -40,8 +40,8 @@ Testing:
 Docker:
 -------
 
-	Create new folder "interBANK" and open it:
-	git clone https://github.com/marcin86junior/interBANK .
+	Create new folder "djangoBanke" and open it:
+	git clone https://github.com/marcin86junior/djangoBanke .
 	cd inter_project\
 	"Open Doker Desktop"
 	change format file in \inter_project\docker-entrypoint.sh    CRLF->LF (save!)
